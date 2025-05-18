@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Additional styles to enhance Tailwind CSS */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better focus styles for accessibility */
+:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Improved button transitions */
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Scroll shadows for overflow containers */
+.scroll-shadow {
+  background-image: 
+    linear-gradient(to right, white, white),
+    linear-gradient(to right, white, white),
+    linear-gradient(to right, rgba(0,0,0,0.25), rgba(255,255,255,0)),
+    linear-gradient(to left, rgba(0,0,0,0.25), rgba(255,255,255,0));
+  background-position: left center, right center, left center, right center;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+
+/* Custom loader animation */
+.custom-loader {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Toast notification tweaks */
+.Toastify__toast {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  color: white !important;
+}
+
+.Toastify__toast--success {
+  background-color: #10b981 !important;
+}
+
+.Toastify__toast--error {
+  background-color: #ef4444 !important;
+}
+
+.Toastify__toast--info {
+  background-color: #3b82f6 !important;
+}
+
+.Toastify__toast--warning {
+  background-color: #f59e0b !important;
+}
+
+/* Override Toastify progress bar colors */
+.Toastify__progress-bar--success {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.Toastify__progress-bar--error {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.Toastify__progress-bar--info {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.Toastify__progress-bar--warning {
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Product image hover effect */
+.product-image-hover {
+  transition: transform 0.3s ease;
+}
+
+.product-image-hover:hover {
+  transform: scale(1.05);
+}
+
+/* Fix for TailwindCSS line-clamp if not applied */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* Custom toast class */
+.custom-toast {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  font-size: 14px !important;
+}
+
+/* Toast icon colors */
+.Toastify__toast-icon {
+  color: white !important;
+}
+
+/* Toast close button */
+.Toastify__close-button {
+  color: white !important;
+  opacity: 0.7 !important;
+}
+
+.Toastify__close-button:hover {
+  opacity: 1 !important;
+}
