@@ -89,6 +89,7 @@ const DashboardHome = () => {
 const ProductManagement = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [submitting, setSubmitting] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showForm, setShowForm] = useState(false);
 
@@ -110,6 +111,7 @@ const ProductManagement = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
+    setSubmitting(true);
 
     try {
       if (selectedProduct) {
@@ -129,6 +131,8 @@ const ProductManagement = () => {
     } catch (error) {
       console.error('Error saving product:', error.response?.data || error.message);
       toast.error(`Error saving product: ${error.response?.data?.message || error.message}`);
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -237,9 +241,17 @@ const ProductManagement = () => {
             <div className="flex space-x-4">
               <button
                 type="submit"
-                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                disabled={submitting}
               >
-                {selectedProduct ? 'Update' : 'Create'}
+                {submitting ? (
+                  <>
+                    <div className="animate-spin rounded-full h-4 w-4 border-t-2 border-b-2 border-white"></div>
+                    {selectedProduct ? 'Updating...' : 'Creating...'}
+                  </>
+                ) : (
+                  selectedProduct ? 'Update' : 'Create'
+                )}
               </button>
               <button
                 type="button"
@@ -248,6 +260,7 @@ const ProductManagement = () => {
                   setSelectedProduct(null);
                 }}
                 className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600"
+                disabled={submitting}
               >
                 Cancel
               </button>

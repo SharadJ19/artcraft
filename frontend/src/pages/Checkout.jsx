@@ -14,7 +14,8 @@ const Checkout = () => {
     street: user?.address?.street || '',
     city: user?.address?.city || '',
     state: user?.address?.state || '',
-    zipCode: user?.address?.zipCode || ''
+    zipCode: user?.address?.zipCode || '',
+    paymentMethod: 'cod'
   });
 
   const handleChange = (e) => {
@@ -103,7 +104,8 @@ const Checkout = () => {
       const orderData = {
         items: orderItems,
         shippingAddress: formData,
-        totalAmount: getTotal()
+        totalAmount: getTotal(),
+        paymentMethod: formData.paymentMethod
       };
 
       console.log('Sending order data:', JSON.stringify(orderData));
@@ -209,6 +211,19 @@ const Checkout = () => {
               className="w-full p-2 border rounded"
               required
             />
+          </div>
+          <div>
+            <label className="block text-gray-700 mb-2">Payment Method</label>
+            <select
+              name="paymentMethod"
+              value={formData.paymentMethod}
+              onChange={handleChange}
+              className="w-full p-2 border rounded"
+              required
+            >
+              <option value="cod">Cash on Delivery</option>
+              <option value="upi" disabled>UPI (Coming Soon)</option>
+            </select>
           </div>
         </div>
 
