@@ -15,23 +15,23 @@
 
 ## ✨ Features
 
-- 🔐 JWT-based secure authentication  
-- 📦 Admin dashboard for full product & order control  
-- 🖼️ Image upload support using Multer  
-- 🛒 Shopping cart and checkout flow  
-- 🚚 Real-time order status updates  
+- 🔐 JWT-based secure authentication
+- 📦 Admin dashboard for full product & order control
+- 🖼️ Image upload support using Multer
+- 🛒 Shopping cart and checkout flow
+- 🚚 Real-time order status updates
 - 💎 Responsive, modern UI with Tailwind CSS
 
 ## 🏷️ Tech Stack
 
-| Layer      | Tech                                                             |
-|------------|------------------------------------------------------------------|
-| Frontend   | React, Tailwind CSS, CSS, React Toastify, React Router, Axios   |
-| Backend    | Node.js, ExpressJS                                               |
-| Database   | MongoDB                                                          |
-| Authentication | JSON Web Token (JWT)                                        |
-| File Upload | Multer                                                         |
-| Deployment | [Render.com](https://render.com)                                |
+| Layer          | Tech                                                          |
+| -------------- | ------------------------------------------------------------- |
+| Frontend       | React, Tailwind CSS, CSS, React Toastify, React Router, Axios |
+| Backend        | Node.js, ExpressJS                                            |
+| Database       | MongoDB                                                       |
+| Authentication | JSON Web Token (JWT)                                          |
+| File Upload    | Multer                                                        |
+| Deployment     | [Render.com](https://render.com)                              |
 
 ## 📺 Live Demo
 
@@ -41,17 +41,18 @@
 
 🔗 **[Live Demo →](https://artcraft.onrender.com)**
 
-
 ## 🧪 Test Credentials
 
 > Some features require login. Use the below credentials or register a new account.
 
 ### 👤 User Login:
-- **Email:** `sharad@gmail.com`  
+
+- **Email:** `sharad@gmail.com`
 - **Password:** `123`
 
 ### 🛠️ Admin Login:
-- **Email:** `admin@gmail.com`  
+
+- **Email:** `admin@gmail.com`
 - **Password:** `123`
 
 ## 🛠️ Installation
@@ -69,14 +70,14 @@ npm start
 cd ../frontend
 npm install
 npm run dev
-````
+```
 
 ## 📁 Folder Structure
 
 ```plaintext
 root/
 │
-├── backend/       
+├── backend/
 │   ├── models/
 │   ├── routes/
 │   ├── uploads/
