@@ -1,6 +1,6 @@
 # 🚀 Art&Craft Supplies eCommerce Platform
 
-A full-stack eCommerce web app for Art & Craft supplies. Built with the MERN stack. Admins can manage products and orders, while users can browse, shop, and checkout securely.
+_A full-stack eCommerce web app for Art & Craft supplies. Built with the MERN stack. Admins can manage products and orders, while users can browse, shop, and checkout securely._
 
 ## ✨ Features
 
