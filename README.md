@@ -29,11 +29,9 @@ A full-stack eCommerce web app for Art & Craft supplies. Built with the MERN sta
 
 You can use the following credentials to log in:  
 
-User Details:
 **Email:** `sharad@gmail.com`  
 **Password:** `123`
 
-Admin Details:
 **Email:** `admin@gmail.com`  
 **Password:** `123`
 
