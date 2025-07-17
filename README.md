@@ -39,7 +39,7 @@
   <img src="https://your-screenshot-or-gif-link.gif" alt="Art&Craft Demo" width="80%"/>
 </p>
 
-🔗 **[Live Demo →](https://artcraft.onrender.com)**
+🔗 **Live Demo →** *([https://artcraft.onrender.com](https://artcraft.onrender.com))*
 
 ## 🧪 Test Credentials
 
