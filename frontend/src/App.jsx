@@ -13,6 +13,8 @@ import UserDashboard from './pages/UserDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import PrivateRoute from './components/PrivateRoute';
 import AdminRoute from './components/AdminRoute';
+import Chatbot from './components/Chatbot';
+
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
@@ -64,6 +66,7 @@ function App() {
                 </p>
               </div>
             </footer>
+            <Chatbot />
           </div>
           <ToastContainer 
             position="bottom-right"
@@ -84,4 +87,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;

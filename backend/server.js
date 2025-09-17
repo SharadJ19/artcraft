@@ -9,6 +9,7 @@ const authRoutes = require('./routes/auth.routes');
 const productRoutes = require('./routes/product.routes');
 const orderRoutes = require('./routes/order.routes');
 const userRoutes = require('./routes/user.routes');
+const chatbotRoutes = require('./routes/chatbot.routes');
 
 dotenv.config();
 
@@ -29,6 +30,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/chatbot', chatbotRoutes);
 
 // Serve static files from the frontend build directory in production
 if (process.env.NODE_ENV === 'production') {

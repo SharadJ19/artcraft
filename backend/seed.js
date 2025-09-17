@@ -23,7 +23,7 @@ const seedData = async () => {
       role: 'admin'
     });
 
-    // Create regular user (sharad)
+    // Create regular user
     const regularUser = await User.create({
       name: 'Sharad',
       email: 'sharad@gmail.com',
@@ -34,7 +34,7 @@ const seedData = async () => {
     console.log('Admin user created:', adminUser.email);
     console.log('Regular user created:', regularUser.email);
 
-    // Create products with only MongoDB ObjectIds
+    // Create products
     await Product.insertMany([
       {
         name: 'Acrylic Paint Set',
@@ -83,6 +83,118 @@ const seedData = async () => {
         category: 'Painting',
         imageUrl: '/uploads/watercolor-palette.jpg',
         stock: 40
+      },
+      {
+        name: 'Craft Scissors',
+        description: 'Precision craft scissors for paper and fabric cutting',
+        price: 7.99,
+        category: 'Tools',
+        imageUrl: '/uploads/craft-scissors.jpg',
+        stock: 60
+      },
+      {
+        name: 'Glue Gun',
+        description: 'Mini hot glue gun with 20 glue sticks included',
+        price: 14.99,
+        category: 'Tools',
+        imageUrl: '/uploads/glue-gun.jpg',
+        stock: 35
+      },
+      {
+        name: 'Craft Knife',
+        description: 'Precision knife set with 5 replaceable blades',
+        price: 11.50,
+        category: 'Tools',
+        imageUrl: '/uploads/craft-knife.jpg',
+        stock: 40
+      },
+      {
+        name: 'Cutting Mat',
+        description: 'A3 size self-healing cutting mat with grid lines',
+        price: 17.99,
+        category: 'Tools',
+        imageUrl: '/uploads/cutting-mat.jpg',
+        stock: 28
+      },
+      {
+        name: 'Glitter Pack',
+        description: 'Assorted 12-color fine glitter jars for decoration',
+        price: 8.50,
+        category: 'Decoration',
+        imageUrl: '/uploads/glitter-pack.jpg',
+        stock: 75
+      },
+      {
+        name: 'Sequins Pack',
+        description: 'Mixed shape sequins pack for crafts and scrapbooking',
+        price: 5.99,
+        category: 'Decoration',
+        imageUrl: '/uploads/sequins-pack.jpg',
+        stock: 90
+      },
+      {
+        name: 'Markers Set',
+        description: 'Dual-tip alcohol markers set of 36 vibrant colors',
+        price: 39.99,
+        category: 'Drawing',
+        imageUrl: '/uploads/markers-set.jpg',
+        stock: 20
+      },
+      {
+        name: 'Fine Liners',
+        description: 'Pack of 10 waterproof fine liner pens, 0.1mm to 0.8mm',
+        price: 12.99,
+        category: 'Drawing',
+        imageUrl: '/uploads/fine-liners.jpg',
+        stock: 55
+      },
+      {
+        name: 'Craft Paper Pack',
+        description: '50-sheet assorted craft paper pack, patterned and plain',
+        price: 10.99,
+        category: 'Paper Crafts',
+        imageUrl: '/uploads/craft-paper.jpg',
+        stock: 70
+      },
+      {
+        name: 'Washi Tape Set',
+        description: 'Set of 20 decorative washi tapes for journaling and crafts',
+        price: 13.99,
+        category: 'Decoration',
+        imageUrl: '/uploads/washi-tape.jpg',
+        stock: 42
+      },
+      {
+        name: 'Air-Dry Clay',
+        description: '500g air-dry clay, safe and non-toxic, ideal for beginners',
+        price: 9.99,
+        category: 'Sculpture',
+        imageUrl: '/uploads/air-dry-clay.jpg',
+        stock: 65
+      },
+      {
+        name: 'DIY Candle Kit',
+        description: 'Complete candle making kit with wax, wicks, and dyes',
+        price: 27.99,
+        category: 'DIY Kits',
+        imageUrl: '/uploads/diy-candle-kit.jpg',
+        stock: 18
+      },
+      {
+        name: 'DIY Jewelry Kit',
+        description: 'Starter kit with beads, wires, and tools for making jewelry',
+        price: 22.99,
+        category: 'DIY Kits',
+        imageUrl: '/uploads/diy-jewelry-kit.jpg',
+        stock: 30
+      },
+      {
+        name: 'DIY Scrapbook Kit',
+        description: 'Complete scrapbook set with stickers, paper, and embellishments',
+        price: 19.50,
+        category: 'DIY Kits',
+        imageUrl: '/uploads/diy-scrapbook-kit.jpg',
+        stock: 26
       }
     ]);
 
@@ -102,4 +214,4 @@ const seedData = async () => {
   }
 };
 
-seedData(); 
+seedData();
