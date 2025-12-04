@@ -12,7 +12,7 @@ router.post('/chat', async (req, res) => {
 
     // Direct REST API call using the exact format from the curl example
     const response = await axios.post(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent`,
       {
         contents: [
           {
